@@ -2,6 +2,7 @@
 Run your rails app in docker using docker compose.
 The intention is use this to dockerify your rails project for use anywhere in development.
 
+[![Gem Version](https://badge.fury.io/rb/docora.svg)](https://badge.fury.io/rb/docora)
 
 [get docker](https://docs.docker.com/engine/getstarted/step_one/#step-1-get-docker)
 [docker-compose](https://docs.docker.com/compose/install/)
