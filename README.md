@@ -19,7 +19,8 @@ The intention is use this to dockerify your rails project for use anywhere in de
 
 ## Usage
 
-TODO: Write usage instructions here
+    docora setup         # in your project
+    docora up            # start the docker containers
 
 ## Development
 
