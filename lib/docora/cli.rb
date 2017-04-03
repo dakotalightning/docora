@@ -106,6 +106,12 @@ module Docora
           "2.4.1"
         ]
 
+        if File.exists?('.gitignore')
+          append_to_file ".gitignore", "#{project}/"
+        else
+          create_file ".gitignore", "#{project}/"
+        end
+
         if File.exists?('.ruby-version')
           ruby_version = File.read('.ruby-version').strip
         elsif File.exists?('Gemfile')
