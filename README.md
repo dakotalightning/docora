@@ -26,7 +26,7 @@ Coming soon...
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/docora.
+Bug reports and pull requests are welcome on GitHub at https://github.com/dakotalightning/docora.
 
 ## License
 
