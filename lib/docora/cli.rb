@@ -22,11 +22,6 @@ module Docora
       do_clean(project)
     end
 
-    desc 'rails', 'wrapper for running docker-compose exec web, rails commands in your rails app'
-    def rails(*args)
-      run("docker-compose exec web #{args}", verbose: false)
-    end
-
     desc 'version', 'Show version'
     def version
       puts Gem.loaded_specs['docora'].version.to_s
@@ -147,14 +142,10 @@ module Docora
         create_file ".dockerignore", dockerignore
         create_file "docker-compose.yml", YAML.dump(docker_compose)
 
-        answer = ask("Do you want to start the containers? (y/n) ", ["y","n"])
-        if answer == "y"
-          do_up(project)
-        end
-
         answer = ask("Want to run rake db:setup? (y/n) ", ["y","n"])
         if answer == "y"
-          run("docker-compose exec web rake db:setup")
+          do_up(project)
+          run("docker-compose exec web rake db:setup", verbose: false)
         end
       end
 
