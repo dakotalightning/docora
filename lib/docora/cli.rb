@@ -224,7 +224,7 @@ module Docora
       def docker_running?
         version = run('docker version', capture: true, verbose: false)
         docker_version = YAML.load(version)
-        abort_with "Please make sure docker is running"  unless docker_version["Client"]
+        abort_with "Please make sure docker is running"  unless docker_version["Server"]
       end
 
       def ask(question, answer_type, &details)
